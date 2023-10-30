@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(image<2)
+                if(image<4)
                 {
                     image++;
                     setImageResource(image);
@@ -63,6 +63,12 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case 2:
                 img.setImageResource(R.drawable.image2);
+                break;
+            case 3:
+                img.setImageResource(R.drawable.image3);
+                break;
+            case 4:
+                img.setImageResource(R.drawable.image4);
                 break;
 
         }
