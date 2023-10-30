@@ -24,23 +24,11 @@ public class MainActivity extends AppCompatActivity {
         previous=findViewById(R.id.button);
 
         setImageResource(image);
-        backwardClick();
-        forwardClick();
+        previousClick();
+        nextClick();
     }
 
-    private void forwardClick() {
-        previous.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(image>1) {
-                    image--;
-                    setImageResource(image);
-                }
-            }
-        });
-    }
-
-    private void backwardClick() {
+    private void previousClick() {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,6 +42,19 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+    private void nextClick() {
+        previous.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(image>1) {
+                    image--;
+                    setImageResource(image);
+                }
+            }
+        });
+    }
+
+
     private void setImageResource(int index) {
 
         switch (index) {
